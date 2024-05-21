@@ -14,9 +14,16 @@ body {
 
 .nav-bar {
   background-color: rgb(156, 203, 244);
-  text-align: right;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  h1 {
+    padding: 1rem;
+    font-size: clamp(1rem, 0.2857rem + 3.0476vw, 2rem);
+    margin: 0;
+    text-transform: uppercase;
+  }
 }
 
 ul {
@@ -42,10 +49,11 @@ a:visited {
   display: grid;
   grid-auto-flow: row;
   justify-content: right;
+  align-content: center;
 
 }
 
-@media (min-width: 561px) {
+@media (min-width: 700px) {
   .nav-links-grid {
     grid-auto-flow: column;
     margin: 0 auto;
@@ -75,7 +83,26 @@ a:visited {
   grid-area: hero;
   z-index: 1;
   text-align: center;
-  font-size: clamp(1.5rem, 1.1429rem + 1.5238vw, 2rem);
+  p {
+    font-style: italic;
+    font-size: 1.4rem;
+  }
+}
+
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 0.5714rem + 6.0952vw, 4rem);
+}
+
+
+.playfair-display-font {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
