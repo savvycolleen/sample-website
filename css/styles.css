@@ -143,8 +143,8 @@ a:visited {
 
 .service-item {
   padding: 2rem;
-  border: 2px solid black;
-  background-color: rgba(99, 202, 243, 0.808);
+  border: 3px solid hsla(0, 0%, 0%, 0.833);
+  background-color: rgb(246,235,243);
   p {
     line-height: 120%;
   }
@@ -152,11 +152,26 @@ a:visited {
 
 .call-to-action {
   margin-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  padding: 3rem 0;
+  background-color: rgb(156,203,244);
   p {
     line-height: 120%;
+  }
+}
+
+label {
+  font-weight: bold;
+}
+
+.cta-grid {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 671px) {
+  .cta-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -174,3 +189,29 @@ a:visited {
 
 }
 
+.button {
+  font-family: sans-serif;
+  font-size: 1rem;
+  background-color: rgb(246,235,243);
+  transition-duration: 0.4s;
+  border: none;
+  color: black;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: black; /* Green */
+  color: white;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-style: none;
+}
